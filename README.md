@@ -6,6 +6,36 @@ The goal is to provide a reusable reporting pipeline that transforms raw test da
 
 ---
 
+## Current Development Status
+
+**Status: Spec and design phase**
+
+ERF is currently in the architecture and planning stage. The repository already includes public specifications for the IC validation data index model, development flow, and Core API design.
+
+The next implementation milestone is **Phase 1 - Core API Foundation**, which will create the Python package skeleton, project/index managers, Excel skeleton generator, SUMMARY sheet writer, and validator.
+
+See the full roadmap here:
+
+- [ROADMAP.md](ROADMAP.md)
+
+---
+
+## Documentation
+
+### Specifications
+
+- [ERF IC Validation Data Index Spec V0.1 - English](docs/spec/ERF_IC_VALIDATION_DATA_INDEX_SPEC_V0_1_EN.md)
+- [ERF IC Validation Data Index Spec V0.1 - Chinese](docs/spec/ERF_IC_VALIDATION_DATA_INDEX_SPEC_V0_1_ZH.md)
+- [ERF Core API Spec V0.1 - English](docs/spec/ERF_CORE_API_SPEC_V0_1_EN.md)
+- [ERF Core API Spec V0.1 - Chinese](docs/spec/ERF_CORE_API_SPEC_V0_1_ZH.md)
+
+### Design Documents
+
+- [ERF Design Flow V0.1 - English](docs/design/DESIGN_FLOW_V0_1_EN.md)
+- [ERF Design Flow V0.1 - Chinese](docs/design/DESIGN_FLOW_V0_1_ZH.md)
+
+---
+
 ## Scope
 
 Engineering Report Framework is designed to support a wide range of engineering reporting workflows, including:
@@ -104,62 +134,60 @@ allowing each layer to evolve independently.
 
 ---
 
-## Roadmap
+## Development Roadmap Summary
 
-### Phase 1 - Automation Test Reporting
+ERF will be developed in phases so the project can move forward even before the real hardware data acquisition system is mature.
 
-Focus on automated report generation for engineering and validation workflows.
+### Phase 0 - Spec Baseline
 
-- [ ] Excel Report Generator
-- [ ] Test Item Table Support
-- [ ] Auto Chart Generation
-- [ ] Pass / Fail Summary
-- [ ] Test Metadata Management
-- [ ] Multi-Sheet Report Support
-- [ ] Reusable Report Templates
+- [x] IC validation data index spec
+- [x] Design flow document
+- [x] Core API spec
 
----
+### Phase 1 - Core API Foundation
 
-### Phase 2 - Validation Report Framework
+- [ ] Python package skeleton
+- [ ] Project manager
+- [ ] Manifest manager
+- [ ] Workbook index manager
+- [ ] Excel workbook builder
+- [ ] SUMMARY sheet writer
+- [ ] Project validator
+- [ ] Basic pytest coverage
 
-Focus on validation and characterization workflows.
+### Phase 2 - CLI for AI and Automation
 
-- [ ] Waveform Embedding
-- [ ] Image Embedding
-- [ ] Historical Data Comparison
-- [ ] Revision Tracking
-- [ ] Golden Sample Comparison
-- [ ] Device Information Management
+- [ ] `erf create-project`
+- [ ] `erf add-workbook`
+- [ ] `erf add-sheet`
+- [ ] `erf list-workbooks`
+- [ ] `erf list-sheets`
+- [ ] `erf validate`
+- [ ] JSON output mode for AI agents
 
----
+### Phase 3 - Mock Data and Demo Workflow
 
-### Phase 3 - Multi-Format Reporting
+- [ ] Mock IC validation project
+- [ ] Mock efficiency data
+- [ ] Mock waveform data
+- [ ] Excel locator update
+- [ ] Demo project documentation
 
-Expand reporting output formats.
+### Phase 4 - Human Review GUI
 
-- [ ] PDF Export
-- [ ] PowerPoint Export
-- [ ] HTML Export
-- [ ] Dashboard Generation
+- [ ] Minimal ERF project browser
+- [ ] Manifest and workbook index viewer
+- [ ] Condition filtering
+- [ ] Dataset locator viewer
+- [ ] Validation result viewer
 
----
+### Phase 5 - Report Assembly and AI Assistance
 
-### Phase 4 - AI Assisted Reporting
+- [ ] Dataset selection workflow
+- [ ] Report draft generation
+- [ ] AI-assisted summary and review workflow
 
-Use AI to improve engineering productivity.
-
-- [ ] AI Summary Generator
-- [ ] Automated Report Review
-- [ ] Trend Analysis Assistant
-- [ ] Engineering Insight Suggestions
-
----
-
-## Current Development Status
-
-Current focus:
-
-> Build a reusable Excel-based automation test report generator for engineering validation and automated testing environments.
+For details, see [ROADMAP.md](ROADMAP.md).
 
 ---
 
